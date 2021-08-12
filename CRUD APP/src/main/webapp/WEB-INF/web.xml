@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+ 
+ <!-- filter>
+ <filter-name>filterclass</filter-name>
+ <filter-class>com.controller.filterclass</filter-class>
+ 
+ 
+ </filter>
+ 
+ <filter-mapping>
+ 
+ <filter-name>filterclass</filter-name>
+ <url-pattern>/Servlet_Login</url-pattern>
+ </filter-mapping>
+ 
+ 
+  -->
+   <servlet>
+    <servlet-name>fooBar1</servlet-name>
+    <jsp-file>/Home2.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>fooBar1</servlet-name>
+    <url-pattern>/Home</url-pattern> <!-- Any URL you want here -->
+</servlet-mapping>
+   <servlet>
+    <servlet-name>fooBar</servlet-name>
+    <jsp-file>/index.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>fooBar</servlet-name>
+    <url-pattern>/Welcome</url-pattern> <!-- Any URL you want here -->
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>Change</servlet-name>
+    <jsp-file>/ChangePass.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Change</servlet-name>
+    <url-pattern>/ChangePassword</url-pattern> <!-- Any URL you want here -->
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Registration</servlet-name>
+    <jsp-file>/Register.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Registration</servlet-name>
+    <url-pattern>/Register</url-pattern> <!-- Any URL you want here -->
+</servlet-mapping>
+
+
+
+
+
+
+
+<error-page>
+
+<error-code>404</error-code>
+<location>/404.jsp</location>
+
+
+
+</error-page>  
+
+  <error-page>
+  <exception-type>java.lang.Throwable</exception-type>
+  <location>/error.jsp</location>
+  </error-page>
+  
+  
+  
+</web-app>

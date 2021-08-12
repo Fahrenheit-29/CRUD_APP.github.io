@@ -1,0 +1,197 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+.container {
+	width: 100%;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: repeat(4, 200px);
+	grid-auto-rows: minmax(200px, auto);
+}
+
+.layout-1 {
+	grid-column: 1;
+	grid-row: 1/5;
+}
+
+.layout-2 {
+	grid-column: 2/span 5;
+	grid-row: 1/2;
+}
+
+.layout-3 {
+	grid-column: 2/span 5;
+	grid-row: 2/3;
+}
+
+.layout-4 {
+	grid-column: 2/span 5;
+	grid-row: 3/4;
+}
+
+.bg {
+	background-color: rgb(49, 54, 49);
+	min-height: 100%;
+}
+
+nav {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	position: sticky;
+	top: 25%;
+}
+
+nav ul {
+	list-style: none;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+nav ul li {
+	line-height: 2rem;
+	padding: 40px 0;
+}
+
+nav ul li a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+nav ul li a:hover {
+	background-color: black;
+	padding: 10px 20px;
+}
+
+.bg_title {
+	background: rgb(207, 70, 15);
+	border-bottom-right-radius: 40%;
+	padding: 20px;
+}
+
+.drp_content {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 200px;
+	background-color: black;
+	z-index: 1;
+}
+
+.drp_content a {
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	min-width: 200px;
+	font-size: 14px;
+}
+
+.drp_content a:hover {
+	background: gray;
+}
+
+.drpdown:hover .drp_content {
+	display: inline;
+}
+
+.title {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	padding: 40px;
+	color: white;
+}
+
+.title h1 {
+	font-size: 4rem;
+	letter-spacing: 1px;
+}
+#marker{
+	  color:red;
+	
+  
+}
+
+
+@media screen and (max-width: 449px) and (min-width: 301px) {
+	.main {
+		display: grid;
+		grid-template-columns: repeat(2, 100px);
+		grid-template-areas: 'layout-1 layout-2 layout-2 '
+			'layout-1 layout-3 layout-3 ' 'layout-1 layout-3 layout-3'
+			'layout-1 layout-4 layout-4';
+		grid-auto-rows: minmax(100px, auto);
+		grid-gap: 10px 0px;
+	}
+	.layout-1 {
+		grid-area: layout-1;
+	}
+	.layout-2 {
+		grid-area: layout-2;
+	}
+	.layout-3 {
+		grid-area: layout-3;
+	}
+	.layout-4 {
+		grid-area: layout-4;
+	}
+	.bg {
+		background-color: rgb(49, 54, 49);
+		position: relative;
+		min-height: 100%;
+	}
+	nav {
+		position: sticky;
+		top: 50px;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+	}
+	nav ul {
+		list-style: none;
+		font-family: sans-serif;
+		font-weight: lighter;
+	}
+	nav ul li {
+		line-height: 2rem;
+		padding: 20px 0;
+	}
+	nav ul li a {
+		font-size: .7rem;
+		text-decoration: none;
+		color: white;
+		display: block;
+		padding: 20px 0;
+	}
+	nav ul li a:hover {
+		background-color: black;
+		padding: 10px 10px;
+	}
+	.bg_title {
+		background: rgb(207, 70, 15);
+		border-bottom-right-radius: 40%;
+		padding: 60px;
+	}
+	.title {
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		padding: 0;
+		color: white;
+	}
+	.title h1 {
+		font-size: 2rem;
+		letter-spacing: 1px;
+	}
+	
+}
+
